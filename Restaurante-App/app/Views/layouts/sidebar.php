@@ -21,6 +21,21 @@
                     <i class="align-middle" data-feather="user"></i> <span class="align-middle">Usuarios</span>
 		                </a>
 		            </li>
+					<li class="sidebar-item">
+                        <a data-bs-target="#submenu-ejemplo" data-bs-toggle="collapse" class="sidebar-link d-flex align-items-center">
+                            <i class="align-middle" data-feather="layers"></i> 
+                            <span class="align-middle">Configuracion</span>
+                            <i class="chevron-icon align-middle ms-auto" data-feather="chevron-down"></i> <!-- Flecha que cambiará -->
+                        </a>
+                        <ul id="submenu-ejemplo" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+						<li class="sidebar-item <?= (current_url() == base_url('/configuracion/salon')) ? 'active' : '' ?>">
+							<a class="sidebar-link" href="<?= base_url('/configuracion/salon') ?>">Salón</a>
+						</li>
+                            <li class="sidebar-item">
+                                <a class="sidebar-link" href="roles.html">Roles</a>
+                            </li>
+                        </ul>
+                    </li>
 
 		            <li class="sidebar-item">
 		                <a class="sidebar-link" href="pages-sign-in.html">
