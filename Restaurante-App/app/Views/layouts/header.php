@@ -12,3 +12,29 @@
 <script src="<?= base_url('js/app.js') ?>"></script>
 <body>
     
+<script>
+            document.addEventListener("DOMContentLoaded", function () {
+    const themeToggle = document.getElementById("themeToggle");
+    const themeLink = document.createElement("link");
+    themeLink.rel = "stylesheet";
+    themeLink.href = "<?= base_url('css/dark.css') ?>"; // Ruta a tu dark.css
+    themeLink.id = "dark-theme";
+
+    // Verifica si el usuario ya activó el modo oscuro
+    if (localStorage.getItem("darkMode") === "enabled") {
+        document.head.appendChild(themeLink);
+        themeToggle.checked = true;
+    }
+
+    themeToggle.addEventListener("change", function () {
+        if (themeToggle.checked) {
+            document.head.appendChild(themeLink);
+            localStorage.setItem("darkMode", "enabled");
+        } else {
+            document.getElementById("dark-theme")?.remove();
+            localStorage.setItem("darkMode", "disabled");
+        }
+    });
+});
+
+        </script>

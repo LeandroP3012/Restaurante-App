@@ -36,6 +36,12 @@
                             </li>
                         </ul>
                     </li>
+					<li class="sidebar-item <?= (current_url() == base_url('/atencion/salon')) ? 'active' : '' ?>">
+						<a class="sidebar-link" href="<?= base_url('/atencion/salon') ?>">
+							<i class="align-middle" data-feather="check-circle"></i> <span class="align-middle">Atención Salón</span>
+						</a>
+					</li>
+
 
 		            <li class="sidebar-item">
 		                <a class="sidebar-link" href="pages-sign-in.html">

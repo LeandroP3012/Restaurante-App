@@ -8,5 +8,5 @@ class MesasModel extends Model
 {
     protected $table      = 'Mesas';
     protected $primaryKey = 'id';
-    protected $allowedFields = ['numero_mesa', 'capacidad'];
+    protected $allowedFields = ['numero_mesa', 'capacidad', 'estado', 'personas_ocupando'];
 }
